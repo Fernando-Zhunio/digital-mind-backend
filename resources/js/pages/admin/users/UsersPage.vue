@@ -25,7 +25,7 @@
           </div>
         </div>
         <div>
-          <button mat-button>Crear nuevo usuario</button>
+          <button>Crear nuevo usuario</button>
         </div>
       </div>
     </div>
@@ -64,7 +64,6 @@
         </tbody>
       </table>
     </div>
-  
   </div>
 </div>
 </template>

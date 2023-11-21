@@ -20,7 +20,7 @@
             <div class="mb-3">
                 <label for="charge_id" class="form-label">Cargo</label>
                 <select type="text" class="form-control" id="charge_id" placeholder="">
-                    <option value="">Seleccione un cargo</option>
+                    <option value="">Seleccion e un cargo</option>
                     <option value="{{ charge.id }}" v-for="charge in props.charges">{{ charge.name }}</option>
                 </select>
             </div>
