@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('admin/users');
 });
+
+Route::get('/', function () {
+    return view('admin.users.index');
+});
+
+

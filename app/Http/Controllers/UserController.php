@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Charge;
+use App\Models\Department;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -17,4 +19,18 @@ class UserController extends Controller
             'data' => $users
         ]);
     }
+
+    public function create() {
+        $departments = Department::all();
+        $charges = Charge::all();
+
+        return response()->json([
+            'success' => true,
+            'data' => [
+               'departments' => $departments,
+               'chargers' => $charges
+            ]
+            ]);
+    }
+
 }
