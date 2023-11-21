@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,14 @@ Route::get('/', function () {
 
 Route::get('/', function () {
     return view('admin.users.index');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/users', [UserController::class,'index']);
+    Route::get('/users/create', [UserController::class,'create']);
+    Route::post('/users', [UserController::class,'store']);
+    Route::put('/users/{user}', [UserController::class,'update']);
+    Route::delete('/users/{user}', [UserController::class,'destroy']);
 });
 
 
